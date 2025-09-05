@@ -7,151 +7,137 @@
     <link rel="icon" type="image/png" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
             line-height: 1.8;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 100%;
-            padding: 50px;
-            text-align: center;
-        }
-        
-        .app-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 30px;
-            display: block;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
         }
         
         h1 {
-            font-size: 32px;
+            font-size: 24px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+        
+        h2 {
+            font-size: 18px;
+            margin-top: 30px;
             margin-bottom: 15px;
-            color: #333;
-            font-weight: 700;
+            font-weight: bold;
         }
         
-        .subtitle {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 40px;
+        p {
+            margin: 10px 0;
         }
         
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .app-intro {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
         }
         
-        .link-card {
+        .link-section {
+            margin: 30px 0;
+        }
+        
+        .link-item {
             display: block;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 12px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #fafafa;
+            border-left: 3px solid #0066cc;
             text-decoration: none;
             color: #333;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: background-color 0.3s ease;
         }
         
-        .link-card:hover {
-            background: #fff;
-            border-color: #667eea;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        .link-item:hover {
+            background-color: #f0f0f0;
         }
         
         .link-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #667eea;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 5px;
         }
         
         .link-description {
             font-size: 14px;
             color: #666;
-            line-height: 1.6;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
         }
         
         .footer {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #e9ecef;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
             font-size: 14px;
-            color: #999;
         }
         
         @media (max-width: 600px) {
-            .container {
-                padding: 30px 20px;
+            body {
+                padding: 15px;
             }
             
             h1 {
-                font-size: 24px;
+                font-size: 20px;
             }
             
-            .app-icon {
-                width: 80px;
-                height: 80px;
+            h2 {
+                font-size: 16px;
             }
             
-            .link-card {
-                padding: 20px;
-            }
-            
-            .link-title {
-                font-size: 18px;
+            .app-intro {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="icon.png" alt="割勘精算 アイコン" class="app-icon">
+    <h1>割勘精算</h1>
+    
+    <div class="app-intro">
+        <p><strong>割勘精算</strong>は、シンプルで使いやすい割り勘計算アプリです。</p>
+        <p>飲み会や食事会での支払いを、簡単に均等割りできます。</p>
+        <p>すべてのデータは端末内で完結し、プライバシーを重視した設計になっています。</p>
+    </div>
+    
+    <h2>ドキュメント</h2>
+    
+    <div class="link-section">
+        <a href="privacy-policy/" class="link-item">
+            <div class="link-title">プライバシーポリシー</div>
+            <div class="link-description">
+                本アプリのプライバシーポリシーと個人情報の取り扱いについて
+            </div>
+        </a>
         
-        <h1>割勘精算</h1>
-        <p class="subtitle">シンプルで使いやすい割り勘計算アプリ</p>
-        
-        <div class="links">
-            <a href="privacy-policy/" class="link-card">
-                <div class="link-title">プライバシーポリシー</div>
-                <div class="link-description">
-                    本アプリのプライバシーポリシーと個人情報の取り扱いについて
-                </div>
-            </a>
-            
-            <a href="support/" class="link-card">
-                <div class="link-title">サポート</div>
-                <div class="link-description">
-                    よくある質問・使い方ガイド
-                </div>
-            </a>
-        </div>
-        
-        <div class="footer">
-            © 2025 割勘精算
-        </div>
+        <a href="support/" class="link-item">
+            <div class="link-title">サポート</div>
+            <div class="link-description">
+                よくある質問・使い方ガイド・お問い合わせ
+            </div>
+        </a>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 割勘精算</p>
     </div>
 </body>
 </html>
